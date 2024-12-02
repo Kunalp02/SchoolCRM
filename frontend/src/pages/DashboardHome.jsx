@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Container, Row, Col, Card, Table, Alert } from 'react-bootstrap';
 import './Dashboard.css';
+import { API_BASE_URL } from '../config';
 
 const DashboardHome = () => {
   const [stats, setStats] = useState({ teachers: 0, students: 0, classes: 0 });
@@ -11,18 +12,18 @@ const DashboardHome = () => {
     // Fetch overall counts
     const fetchStats = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/auth/getCounts');
+        const response = await fetch(`${API_BASE_URL}/api/auth/getCounts`);
         const data = await response.json();
         setStats(data);
       } catch (err) {
-        setError('Failed to fetch stats');
+        setError('Failed to fetch stats', err);
       }
     };
 
     // Fetch detailed class information
     const fetchClassDetails = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/classes/getDetails');
+        const response = await fetch(`${API_BASE_URL}/api/classes/getDetails`);
         const data = await response.json();
         if (data.success) {
           setClassDetails(data.data);
@@ -30,7 +31,7 @@ const DashboardHome = () => {
           setError(data.message || 'Failed to fetch class details');
         }
       } catch (err) {
-        setError('An error occurred while fetching class details');
+        setError('An error occurred while fetching class details', err);
       }
     };
 

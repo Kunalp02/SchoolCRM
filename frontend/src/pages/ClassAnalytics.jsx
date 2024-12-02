@@ -4,6 +4,7 @@ import { Doughnut } from "react-chartjs-2";
 import { Container, Table, Alert } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import './ClassAnalytics.css';
+import {API_BASE_URL} from '../config';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -18,7 +19,7 @@ const ClassAnalytics = () => {
     const fetchAnalytics = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/classes/${classId}/analytics`
+          `${API_BASE_URL}/api/classes/${classId}/analytics`
         );
 
         const result = await response.json();

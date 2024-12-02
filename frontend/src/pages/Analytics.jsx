@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Form, Button, Row, Col, ToggleButtonGroup, ToggleButton, Table } from 'react-bootstrap';
+import { API_BASE_URL } from '../config';
 
 const Analytics = () => {
   const [view, setView] = useState('monthly'); // Default to monthly view
@@ -18,7 +19,7 @@ const Analytics = () => {
       const params = { view, year };
       if (view === 'monthly') params.month = month;
 
-      const { data } = await axios.get('http://localhost:5000/api/analytics/income-expenses', { params });
+      const { data } = await axios.get(`${API_BASE_URL}/api/analytics/income-expenses`, { params });
       setAnalyticsData(data);
     } catch (err) {
       setError(err.response?.data?.error || 'Failed to fetch data');

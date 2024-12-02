@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { Alert, Button, Form } from 'react-bootstrap';
+import { API_BASE_URL } from '../config';
 
 const RegistrationForm = () => {
   const [name, setName] = useState('');
@@ -19,7 +20,7 @@ const RegistrationForm = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/signup', {
+      const response = await axios.post(`${API_BASE_URL}/api/auth/signup`, {
         name,
         email,
         password,

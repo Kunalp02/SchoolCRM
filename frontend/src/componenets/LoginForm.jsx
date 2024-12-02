@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import axios from 'axios'; // Make sure to install axios
-
+import { API_BASE_URL } from '../config';
 // eslint-disable-next-line react/prop-types
 const LoginForm = ({ onLoginSuccess }) => {
   const [email, setEmail] = useState('');
@@ -13,7 +13,7 @@ const LoginForm = ({ onLoginSuccess }) => {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
+      const response = await axios.post(`${API_BASE_URL}/api/auth/login`, {
         email,
         password,
       });
