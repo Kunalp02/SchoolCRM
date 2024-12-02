@@ -8,7 +8,7 @@ import Profile from './pages/Profile';
 import DashboardLayout from './componenets/DashboardLayout';
 import Analytics from './pages/Analytics';
 import ClassAnalytics from './pages/ClassAnalytics';
-import ClassRoomManagement from './componenets/ClassRoomManagement';
+import ClassRoomManagement from './componenets/ClassroomManagement';
 
 const App = () => {
   return (
