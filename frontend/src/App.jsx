@@ -6,9 +6,9 @@ import Register from './pages/Register';
 import DashboardHome from './pages/DashboardHome';
 import Profile from './pages/Profile';
 import DashboardLayout from './componenets/DashboardLayout';
-import ClassAnalytics from './pages/classAnalytics';
-import ClassroomManagement from './componenets/ClassRoomManagement';
 import Analytics from './pages/Analytics';
+import ClassAnalytics from './pages/ClassAnalytics';
+import ClassRoomManagement from './componenets/ClassRoomManagement';
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/dashboard/*" element={<DashboardLayout />}>
           <Route index element={<DashboardHome />} />
           <Route path="profile" element={<Profile />} />
-          <Route path="classroom-management" element={<ClassroomManagement />} />
+          <Route path="classroom-management" element={<ClassRoomManagement />} />
           <Route path="class-analytics/:classId" element={<ClassAnalytics />} />
           <Route path="analytics" element={<Analytics />} />
         </Route>
