@@ -1,0 +1,88 @@
+/* General container styling */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header styling */
+  h1, h3 {
+    color: #343a40;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  /* Subheader styling */
+  p {
+    color: #6c757d;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+  }
+  
+  /* Table Styling */
+  .table {
+    margin-top: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .table th {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  .table td {
+    background-color: #ffffff;
+    color: #495057;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  .table-bordered {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  /* Gender chart styling */
+  .doughnut-chart {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Alert styles */
+  .alert {
+    margin-top: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Loader styling */
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
